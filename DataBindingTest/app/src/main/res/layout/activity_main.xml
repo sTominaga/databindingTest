@@ -24,7 +24,7 @@
             android:background="@color/colorAccent"
             android:id="@+id/edit_text"
             android:layout_height="40dp"
-            android:text="@={testStringData.inputString}"
+            android:text="@={testStringData.inputStringText}"
             android:layout_width="match_parent"/>
 
         <Button

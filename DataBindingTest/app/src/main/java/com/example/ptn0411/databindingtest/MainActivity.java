@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("MainActivity", "button clicked");
-                Log.d("MainActivity", testStringData.inputString);
+                Log.d("MainActivity", testStringData.getInputString());
                 Log.d("MainActivity", binding.editText.getText().toString());
             }
         });
