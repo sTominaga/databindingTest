@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="StringModel"
+            type="com.example.ptn0411.kotlindatabindingtest.StringModel"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:background="@android:color/darker_gray"
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@={StringModel.editTextString}"/>
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{StringModel.editTextString}"/>
+
+        <Button
+            android:background="@android:color/holo_blue_dark"
+            android:id="@+id/button"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="@{!StringModel.editTextString.empty}"/>
+
+    </LinearLayout>
+
+
+</layout>
