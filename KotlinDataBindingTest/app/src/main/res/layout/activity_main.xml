@@ -28,12 +28,12 @@
             android:text="@{StringModel.editTextString}"/>
 
         <Button
-            android:background="@android:color/holo_blue_dark"
             android:id="@+id/button"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="ログを確認"
             android:enabled="@{!StringModel.editTextString.empty}"/>
 
     </LinearLayout>

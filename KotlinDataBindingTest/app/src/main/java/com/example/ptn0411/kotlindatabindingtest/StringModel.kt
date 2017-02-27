@@ -1,13 +1,19 @@
 package com.example.ptn0411.kotlindatabindingtest
 
 import android.databinding.BaseObservable
+import android.databinding.Bindable
 
 /**
  * Created by ptn0411 on 2017/02/27.
  */
 
-class StringModel(var editTextString: String) : BaseObservable() {
-    init {
-        this.editTextString = editTextString
-    }
+class StringModel: BaseObservable() {
+
+    @get:Bindable
+    var editTextString: String = ""
+        set(value) {
+            field = value
+            notifyPropertyChanged(BR.editTextString)
+        }
+
 }

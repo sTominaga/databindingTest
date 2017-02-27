@@ -17,15 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        final StringModel stringModel = new StringModel("ここに入力");
+        final StringModel stringModel = new StringModel();
         binding.setStringModel(stringModel);
 
         Button button = (Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("MainActivity", StringModel.class.getSimpleName()+":" + stringModel.getEditTextString());
-                Log.d("MainActivity", binding.editText.getText().toString());
+                Log.d("MainActivity", StringModel.class.getSimpleName()+"の値:" + stringModel.getEditTextString());
+                Log.d("MainActivity", "EditTextの値:"+binding.editText.getText().toString());
             }
         });
     }
