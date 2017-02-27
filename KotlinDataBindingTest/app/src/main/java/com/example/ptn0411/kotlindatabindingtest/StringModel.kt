@@ -4,7 +4,7 @@ import android.databinding.BaseObservable
 import android.databinding.Bindable
 
 /**
- * Created by ptn0411 on 2017/02/27.
+ * Created by sTominaga on 2017/02/27.
  */
 
 class StringModel: BaseObservable() {
